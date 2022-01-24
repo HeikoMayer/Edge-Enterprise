@@ -1115,6 +1115,8 @@ For detailed information about valid url patterns, see [https://go.microsoft.com
 
 To exclude cookies from being deleted on exit, configure the [SaveCookiesOnExit](#savecookiesonexit) policy.
 
+To add the option "Include third-party cookies on this site" for an entry, add the prefix "*," (without quotation marks) to the Url.
+
   #### Supported features:
 
   - Can be mandatory: Yes
@@ -1147,6 +1149,7 @@ To exclude cookies from being deleted on exit, configure the [SaveCookiesOnExit]
 ```
 SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
+SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\3 = "*,www.contoso.edu"
 
 ```
 
@@ -1158,6 +1161,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
 <array>
   <string>https://www.contoso.com</string>
   <string>[*.]contoso.edu</string>
+  <string>*,www.contoso.edu</string>
 </array>
 ```
   
